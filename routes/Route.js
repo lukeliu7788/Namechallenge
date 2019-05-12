@@ -14,7 +14,7 @@ module.exports=(app)=>{
             FullName:name,
             FirstName:name.split(' ')[0],
             LastName:name.split(' ')[1]
-        }).save();
+        }).save((err)=>{console.log(err)});
         res.json(resultJson);
     });
 
