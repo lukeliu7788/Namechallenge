@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "engines":{
-
-    "npm":""
+    "node":"10.15.3",
+    "npm":"6.9.0"
   },
   "scripts": {
-    "start":"",
+    "start":"node index.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
